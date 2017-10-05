@@ -1,7 +1,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
-
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:500,600')
 *::-webkit-input-placeholder
 	color: #666
 	opacity: 1
@@ -17,6 +17,9 @@
 *:-ms-input-placeholder
 	color: #666
 	opacity: 1
+*
+	margin: 0
+	padding: 0
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -25,21 +28,176 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-html, body
+html
 	height: 100%
 
 body
 	font-size: 16px
+	font-family: $default-font
+	min-height: 100%
 	min-width: 320px
 	position: relative
 	line-height: 1.75
-	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
+
+/* Typografy */
+
+a,
+button
+	outline: none !important
+
+a
+	color: $color-white
+	text-decoration: none
+
+ul
+	list-style: none
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin: 0
+	padding: 0
+	font-weight: normal
+
+h1
+	font-size: 20px
+
+h2
+	font-size: 18px
+
+h3
+	font-size: 16px
+
+h4
+	font-size: 14px
+
+h5
+	font-size: 13px
+
+h6
+	font-size: 12px
+
+h1.big
+	font-size: 40px
+
+.alignleft
+	float: left
+	margin: 10px 10px 10px 0
+
+.alignright
+	float: right
+	margin: 10px 0 10px 10px
+
+.aligncenter
+	display: block
+	margin-left: auto
+	margin-right: auto
+	margin-top: 10px
+	margin-bottom: 10px
+
+input,
+textarea
+	outline: none
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+/* Button */
+
+.button
+	font-family: $default-font
+	color: $color-white
+	display: inline-block
+	border-radius: 5px
+	border: none
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	touch-action: manipulation
+	position: relative
+	font-weight: 500
+	font-size: 15px
+	vertical-align: middle
+	text-align: center
+	white-space: normal
+	word-wrap: normal
+	line-height: 50px
+	transition: all .25s linear
+
+.btn-default
+	background: $color-pink
+	padding-left: 23px
+	padding-right: 23px
+	&:hover
+		background: $color-pink-dark
+
+/* Header */
+
+.header
+	background: #0d0e23
+	min-height: 760px
+	padding-top: 40px
+
+.header-logo
+	display: inline-block
+
+.header-nav__list
+	text-align: center
+	margin-top: 6px
+
+.header-nav__item
+	display: inline-block
+	padding: 0 10px
+	&:first-child
+		padding-left: 0
+		a
+			padding-left: 0
+	&:last-child
+		padding-right: 0
+		a
+			padding-right: 0
+
+.header-nav__link
+	font: inherit
+	font-size: 0.95em //15.3px
+	display: inline-block
+	line-height: 40px
+	text-transform: uppercase
+	padding: 0 7px
+	opacity: .6
+	transition: all .25s linear
+	&:hover
+		opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import "media" // Всегда в конце
