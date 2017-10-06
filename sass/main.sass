@@ -34,6 +34,7 @@ html
 body
 	font-size: 16px
 	font-family: $default-font
+	font-weight: 500
 	min-height: 100%
 	min-width: 320px
 	position: relative
@@ -153,7 +154,10 @@ textarea
 /* Header */
 
 .header
-	background: #0d0e23
+	background: #0d0e23 url(../img/bg-header--main.jpg)
+	background-repeat: no-repeat
+	background-position: center 0
+	background-size: cover
 	min-height: 760px
 	padding-top: 40px
 
@@ -191,7 +195,42 @@ textarea
 
 
 
+/* Footer */
 
+.footer
+	background: $color-blue
+	position: absolute
+	left: 0
+	bottom: 0
+	width: 100%
+	padding-top: 104px
+	padding-bottom: 20px
+
+/* Social */
+
+.socials-footer
+	text-align: right
+.footer-social__item
+	display: inline-block
+	margin: 0 5px
+	&:first-child
+		margin-left: 0
+	&:last-child
+		margin-right: 0
+.footer-social__link
+	width: 40px
+	height: 40px
+	display: inline-block
+	text-align: center
+	vertical-align: middle
+	background: $color-blue-light
+	font-size: 20px
+	color: $color-blue
+	border-radius: 50%
+	i
+		line-height: 42px
+
+/* Footer End */
 
 
 
