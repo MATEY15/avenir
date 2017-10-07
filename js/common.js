@@ -1,5 +1,11 @@
 $(function() {
 
+	// Click Prevent Default
+
+	$('#click-prevent').click(function(e){
+		 e.preventDefault();
+	});
+
 	// Footer height
 
 	function resize() {
@@ -8,6 +14,15 @@ $(function() {
 		//foot.style.marginTop = -footHeight+"px";
 		document.getElementById('body').style.paddingBottom = footHeight+"px";
 	}
+	window.onresize = resize;
 	window.onload = resize;
+
+	// Open Menu
+
+	$(".container").click(function() {
+    $(".stick").toggleClass(function () {
+      return $(this).is('.open, .close') ? 'open close' : 'open';
+    });
+  });
 
 });

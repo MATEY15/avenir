@@ -103,6 +103,9 @@ h1.big
 	margin-top: 10px
 	margin-bottom: 10px
 
+.paddingleft
+	padding-left: $padding-default
+
 input,
 textarea
 	outline: none
@@ -151,6 +154,156 @@ textarea
 	&:hover
 		background: $color-pink-dark
 
+/* Open menu */
+
+.burger-nav__list
+	width: 26px
+	height: 18px
+	position: absolute
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	cursor: pointer
+
+.stick
+	width: 80px
+	height: 8px
+	border-radius: 4px
+	margin-bottom: 15px
+	background-color: #2DFDB9
+	display: inline-block
+	&:last-child
+		margin-bottom: 0px
+
+.stick-1.open
+	animation: stick-1-open .6s ease-out forwards
+
+.stick-2.open
+	animation: stick-2-open .6s linear forwards
+
+.stick-3.open
+	animation: stick-3-open .6s linear forwards
+
+@keyframes stick-1-open
+	0%
+		width: 80px
+
+	40%
+		background-color: #ff1456
+		width: 8px
+		transform: translate(40px, 0px)
+
+	75%, 80%
+		width: 8px
+		transform: translate(40px, -50px)
+		animation-timing-function: cubic-bezier(0, 1, 1, 1)
+
+	100%
+		background-color: #ff1456
+		width: 8px
+		transform: translate(35px, 46px)
+
+
+@keyframes stick-2-open
+	80%
+		background-color: #2DFDB9
+		transform: translate(0px, 0px) rotate(0deg)
+
+	100%
+		background-color: #ff1456
+		transform: translate(8px, 0px) rotate(40deg)
+
+
+@keyframes stick-3-open
+	80%
+		background-color: #2DFDB9
+		transform: translate(0px, 0px) rotate(0deg)
+
+	100%
+		background-color: #ff1456
+		transform: translate(8px, -23px) rotate(-40deg)
+
+
+.stick-1.close
+	width: 8px
+	transform: translate(27px, 26px)
+	animation: stick-1-close .6s ease-out forwards
+
+.stick-2.close
+	transform: translate(0px, 0px) rotate(40deg)
+	animation: stick-2-close .6s ease-out forwards
+
+.stick-3.close
+	transform: translate(0px, -23px) rotate(-40deg)
+	animation: stick-3-close .6s ease-out forwards
+
+@keyframes stick-1-close
+	0%, 70%
+		width: 0px
+
+	100%
+		width: 80px
+		transform: translate(0, 0)
+
+
+@keyframes stick-2-close
+	0%
+		background-color: #ff1456
+		width: 80px
+
+	20%
+		background-color: #ff1456
+		width: 8px
+		transform: translate(0, 0px) rotate(40deg)
+
+	40%
+		background-color: #2DFDB9
+		width: 0px
+
+	65%
+		transform: translate(0, -70px)
+		animation-timing-function: cubic-bezier(0, 1, 1, 1)
+
+	80%
+		width: 0px
+
+	100%
+		width: 80px
+		transform: translate(0, 0px)
+
+
+@keyframes stick-3-close
+	0%
+		background-color: #ff1456
+		width: 80px
+
+	20%
+		background-color: #ff1456
+		width: 8px
+		transform: translate(0, -23px) rotate(-40deg)
+
+	40%
+		background-color: #2DFDB9
+
+	65%
+		transform: translate(0, -93px)
+		animation-timing-function: cubic-bezier(0, 1, 1, 1)
+
+	90%
+		width: 8px
+
+	100%
+		width: 80px
+		transform: translate(0, 0px)
+
+/* Open menu End */
+
 /* Header */
 
 .header
@@ -195,6 +348,16 @@ textarea
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 
 .footer
@@ -203,13 +366,34 @@ textarea
 	left: 0
 	bottom: 0
 	width: 100%
+
+.footer-header
+	border-bottom: 1px solid $color-blue-light-dark
 	padding-top: 104px
-	padding-bottom: 20px
+	padding-bottom: 75px
+
+.footer-header__heading
+	font: inherit
+	font-size: 15px
+	color: $color-white
+	margin-bottom: 26px
+
+.footer-header__item
+	margin-bottom: 17px
+	&:last-child
+		margin-bottom:
+
+.footer-header__link
+	color: $color-link-footer
+	display: block
+	line-height: 24px
 
 /* Social */
 
 .socials-footer
 	text-align: right
+.footer-social__list
+	margin-top: 145px
 .footer-social__item
 	display: inline-block
 	margin: 0 5px
@@ -229,6 +413,46 @@ textarea
 	border-radius: 50%
 	i
 		line-height: 42px
+
+.footer-bottom
+	padding-top: 42px
+	padding-bottom: 42px
+
+.avenir-copyright
+	color: $color-link-footer
+
+.navigation-footet__item
+	display: inline-block
+	padding: 0 18px
+	&:first-child
+		padding-left: 0
+		.navigation-footet__link
+			padding-left: 0
+	&:last-child
+		padding-right: 0
+		.navigation-footet__link
+			padding-right: 0
+
+.navigation-footet__link
+	color: $color-link-footer
+	padding: 0 4px
+	line-height: 20px
+
+// Common Height
+
+.common-height.paddingleft
+	padding-left: 60 + $padding-default
+
+.common-height:nth-child(5n+1)
+	clear: left
+
+.common-height:after
+	display: block
+	visibility: hidden
+	font-size: 0
+	height: 0
+	clear: both
+	content: "."
 
 /* Footer End */
 
