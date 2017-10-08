@@ -79,30 +79,68 @@
 	.header-nav__list
 		display: none
 		margin-top: 80px
+		padding-top: 44px
 		text-align: center
 		background: $color-blue
 	.header-nav__item
 		display: block
 		text-align: center
+		margin-bottom: 22px
 	.header-nav__link
+		font-size: 1.125em
 		width: 100%
 	.header-nav__button
 		display: inline-block
+		margin-top: 24px
+		margin-bottom: 42px
 	.btn-default
 		padding-left: 23px
 		padding-right: 23px
 
 @media only screen and (max-width : 767px)
-	/**/
+	.common-height:nth-child(3n+1)
+		clear: left
+
+	.common-height:after
+		display: block
+		visibility: hidden
+		font-size: 0
+		height: 0
+		clear: both
+		content: "."
+
+	.footer-social__list
+		margin-top: 114px
+
+	.common-height
+		margin-bottom: 20px
+
+	.navigation-footet__bottom
+		text-align: center
+		margin-bottom: 20px
+
+	.avenir-copyright
+		text-align: center
+
+	.navigation-footet__item
+		padding: 0 15px
 
 @media only screen and (max-width : 640px)
-	/**/
+	.footer-header
+		padding-top: 70px
+		padding-bottom: 25px
 
 @media only screen and (max-width : 600px)
 	/**/
 
 @media only screen and (max-width : 540px)
 	/**/
+
+@media only screen and (max-width : 539px)
+	.common-height
+		width: 50%
+	.common-height:nth-child(3n+1)
+		clear: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -112,7 +150,8 @@
 	/**/
 
 @media only screen and (max-width : 375px)
-	/**/
+	.navigation-footet__item
+		padding: 0 5px
 
 @media only screen and (max-width : 360px)
 	/**/
