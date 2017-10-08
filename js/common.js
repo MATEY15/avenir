@@ -14,8 +14,8 @@ $(function() {
 		//foot.style.marginTop = -footHeight+"px";
 		document.getElementById('body').style.paddingBottom = footHeight+'px';
 	}
-	window.onresize = resize;
 	window.onload = resize;
+	window.onresize = resize;
 
 	// Fixed menu
 
