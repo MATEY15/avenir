@@ -2,18 +2,125 @@
 
 /*==========  Desktop First  ==========*/
 
+@media only screen and (max-width : 1290px)
+	.uses-bots__container
+		background-position: -1% bottom
+
+@media only screen and (max-width : 1280px)
+	.uses-bots__container
+		background-position: -2% bottom
+
+@media only screen and (max-width : 1265px)
+	.uses-bots__container
+		background-position: -3% bottom
+
+@media only screen and (max-width : 1250px)
+	.uses-bots__container
+		background-position: -4% bottom
+
+@media only screen and (max-width : 1230px)
+	.uses-bots__container
+		background-position: -6% bottom
+
+@media only screen and (max-width : 1215px)
+	.uses-bots__container
+		background-position: -8% bottom
+
+@media only screen and (max-width : 1200px)
+	.uses-bots__container
+		background-position: -9% bottom
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-	.btn-default
+	.wrapper-bot
+		width: 526px
+	.button__top-line
 		padding-left: 10px
 		padding-right: 10px
 	.header-nav__item
 		padding: 0 5px
 	.common-height.paddingleft
-		padding-left: 40 + $padding-default
+		padding-left: 20 + $padding-default
+	.uses-bots__container
+		background-image: url(../img/uses-bots__bg-small.png)
+		background-position: 130px 104px
+	.list-items__items,
+	.stage-development__desc
+		white-space: initial
+	.uses-bots__wrapper
+		padding-left: 70px
+		padding-right: 10px
+		padding-bottom: 70px
+	.we-do__images
+		max-width: 100%
+	.we-do__item
+		min-height: 100%
+	.we-do__item-child
+		min-height: 334px
+	.we-do__circle-buttom
+		bottom: 30px
+
+@media only screen and (max-width : 1165px)
+	.uses-bots__container
+		background-position: 114px 104px
+
+@media only screen and (max-width : 1140px)
+	.uses-bots__container
+		background-position: 100px 104px
+
+@media only screen and (max-width : 1100px)
+	.uses-bots__container
+		background-position: 80px 104px
+
+@media only screen and (max-width : 1080px)
+	.uses-bots__container
+		background-position: 70px 104px
+
+@media only screen and (max-width : 1060px)
+	.uses-bots__container
+		background-position: 60px 104px
+
+@media only screen and (max-width : 1040px)
+	.uses-bots__container
+		background-position: 50px 104px
+
+@media only screen and (max-width : 1024px)
+	.uses-bots__container
+		background-position: 40px 104px
+
+@media only screen and (max-width : 1004px)
+	.uses-bots__container
+		background-position: 30px 104px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.heading-p__default
+		white-space: initial
+	.we-do__item-child
+		min-height: 260px
+	.stage-development__item
+		padding: 30px 15px 30px
+		min-height: 320px
+	.uses-bots .heading-h3__default
+		margin-bottom: 40px
+	.uses-bots__wrapper
+		padding-left: 0px
+		padding-right: 0px
+		padding-bottom: 70px
+	.dot-green
+		left: 64px
+	.dot-blue
+		right: 18px
+	.dot-yelow
+		left: 54px
+	.wrapper-bot
+		width: 390px
+	.uses-bots__container
+		background-image: none
+	.wrapper-bot
+		background-image: url(../img/uses-bots__mobile.png)
+		background-position: center
+		background-repeat: no-repeat
 	.wrapper-header__button
 		display: none
 
@@ -58,6 +165,17 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.top-line__wrapper--bg
+		background: $color-blue
+		border-bottom: 1px solid $color-blue-light-dark2
+		transition: all 0.25s
+	.top-line__wrapper.active
+		padding-top: 15px
+		padding-bottom: 15px
+	.wrapper__carousel-top .owl-prev
+		left: 30px
+	.wrapper__carousel-top .owl-next
+		right: 30px
 	.burger-nav__list
 		position: absolute
 		right: 0
@@ -93,11 +211,28 @@
 		display: inline-block
 		margin-top: 24px
 		margin-bottom: 42px
-	.btn-default
+	.button__top-line
 		padding-left: 23px
 		padding-right: 23px
 
 @media only screen and (max-width : 767px)
+	.we-do__circle-buttom
+		bottom: 40px
+	.we-do__item-child
+		min-height: 374px
+	.we-do
+		.padd-bottom___100
+			padding-bottom: 50px
+		.padd-top___80
+			padding-top: 20px
+	.we-do__item
+		min-height: 100%
+		max-width: 320px
+		margin: 0 auto 24px
+	.uses-bots__wrapper
+		padding-left: 50px
+	.wrapper-bot
+		margin: 0 auto 30px
 	.common-height:nth-child(3n+1)
 		clear: left
 
@@ -126,15 +261,42 @@
 		padding: 0 15px
 
 @media only screen and (max-width : 640px)
+	.we-do__item-child
+		min-height: 300px
+	.stage-development__item
+		width: 50%
+		margin-bottom: 20px
+	.stage-development__wrapper
+		box-shadow: none
 	.footer-header
 		padding-top: 70px
 		padding-bottom: 25px
 
 @media only screen and (max-width : 600px)
-	/**/
+	.carousel-top__item
+		max-width: 480px
 
 @media only screen and (max-width : 540px)
-	/**/
+	.header
+		min-height: 680px
+	.wrapper__carousel-top
+		padding-top: 125px
+	.carousel-top__heading
+		font-size: 48px
+		line-height: 50px
+	.wrapper__carousel-top .owl-prev,
+	.wrapper__carousel-top .owl-next
+		display: none
+	.mobile-540__mobile
+		width: 100%
+	.uses-bots__wrapper
+		padding-left: 20px
+		padding-right: 20px
+	.list-items__items::before
+		left: -15px
+	.heading-h3__default
+		br
+			display: none
 
 @media only screen and (max-width : 539px)
 	.common-height
@@ -144,21 +306,55 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.carousel-top__item
+		padding: 0 15px
+	.heading-h3__default
+		font-size: 32px
+		line-height: 36px
 
 @media only screen and (max-width : 414px)
-	/**/
+	.stage-development__item
+		width: 100%
+		min-height: 280px
+		padding: 40px 25px 30px
 
 @media only screen and (max-width : 375px)
+	.dot-blue
+		right: 10px
+	.dot-green
+		left: 58px
+	.dot-yelow
+		left: 46px
+	.no-padding__375
+		padding: 0 !important
+	.wrapper-bot
+		width: 100%
 	.navigation-footet__item
 		padding: 0 5px
 
 @media only screen and (max-width : 360px)
-	/**/
+	.heading-h3__default
+		font-size: 28px
+		line-height: 32px
+	.dot-blue
+		right: 4px
+	.dot-green
+		left: 48px
+	.dot-yelow
+		left: 36px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+	.footer-social__list
+		margin-top: 40px
+	.text-center__320
+		text-align: center
+	.wrapper-bot
+		background-size: 110%
+	.common-height
+		width: 100%
+	.navigation-footet__item
+		padding: 0
 
 
 /*==========  Mobile First  ==========*/

@@ -191,6 +191,9 @@ textarea
 	line-height: 48px
 	padding-left: 29px
 	padding-right: 29px
+	&:hover
+		background: $color-white
+		color: #3e3f4d
 
 /* Open menu */
 
@@ -338,10 +341,7 @@ textarea
 	background-color: transparent
 	transition: all 0.25s
 
-.top-line__wrapper--bg
-	background: $color-blue
-	border-bottom: 1px solid $color-blue-light-dark2
-	transition: all 0.25s
+
 
 /* Open menu End */
 
@@ -431,6 +431,11 @@ textarea
 
 .button__play-video
 	padding-left: 43px
+	&:hover
+		color: $color-pink
+		background: $color-white
+	&:hover::before
+		border-left: 11px solid $color-pink
 	&::before
 		content: ""
 		display: block
@@ -443,6 +448,7 @@ textarea
 		top: 50%
 		left: 20px
 		margin-top: -6px
+		transition: all .25s ease
 
 .owl-prev,
 .owl-next
@@ -457,13 +463,18 @@ textarea
 
 .wrapper__carousel-top
 	.owl-prev
+		opacity: .5
 		width: 12px
 		height: 24px
 		background-image: url("../img/arrow-slider.png")
 		top: 25%
 		left: 60px
 		margin-top: -12px
+		transition: all .25s ease
+		&:hover
+			opacity: 1
 	.owl-next
+		opacity: .5
 		width: 12px
 		height: 24px
 		background-image: url("../img/arrow-slider.png")
@@ -471,6 +482,9 @@ textarea
 		top: 25%
 		right: 60px
 		margin-top: -12px
+		transition: all .25s ease
+		&:hover
+			opacity: 1
 
 .owl-dots
 	text-align: center
@@ -724,7 +738,7 @@ textarea
 .we-do__circle-buttom
 	position: absolute
 	left: 50%
-	bottom: 20px
+	bottom: 60px
 	margin-left: -25px
 	display: inline-block
 	text-align: center
@@ -791,6 +805,9 @@ textarea
 	color: $color-link-footer
 	display: block
 	line-height: 24px
+	transition: all .25s ease
+	&:hover
+		color: $social-hover
 
 /* Social */
 
@@ -815,6 +832,9 @@ textarea
 	font-size: 20px
 	color: $color-blue
 	border-radius: 50%
+	transition: all .25s ease
+	&:hover
+		background: $social-hover
 	i
 		line-height: 42px
 
@@ -841,6 +861,9 @@ textarea
 	color: $color-link-footer
 	padding: 0 4px
 	line-height: 20px
+	transition: all .25s ease
+	&:hover
+		color: $social-hover
 
 // Common Height
 
