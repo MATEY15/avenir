@@ -96,11 +96,29 @@ h1.big
 	text-align: center
 	color: $color-blue-dark
 
+.heading-p__default
+	font-size: 17px
+	text-align: center
+	color: $blue-gray
+	white-space: pre-line;
+
+.padd-top___80
+	padding-top: 80px
+
 .padd-top___94
 	padding-top: 94px
 
 .padd-bottom___94
 	padding-bottom: 94px
+
+.padd-bottom___100
+	padding-bottom: 100px
+
+.margin-boot__18
+	margin-bottom: 18px
+
+.margin-boot__62
+	margin-bottom: 62px
 
 .alignleft
 	float: left
@@ -613,13 +631,120 @@ textarea
 .stage-development
 	background: $color-gray-light
 
+.stage-development__wrapper
+	margin-bottom: 24px
+	box-shadow: 0 15px 30px 0 rgba(13, 14, 35, 0.07)
 
+.stage-development__item
+	width: 25%
+	float: left
+	padding: 60px 30px 70px
+	min-height: 340px
+	background: $color-white
+	text-align: center
+	border-right: 1px solid #e7eaef
+	&:last-child
+		border-right: 0
 
+.stage-development__heading
+	font-size: 18px
+	font-weight: 600
+	color: $color-blue-dark
+	margin-bottom: 8px
 
+.stage-development__icon
+	padding-top: 10px
+	width: 90px
+	height: 90px
+	border-radius: 50%
+	background: #f2f4f7
+	margin: 0 auto 29px
+	display: table
 
+.stage-development__vertical
+	display: table-cell
+	vertical-align: middle
 
+.development-icon
+	//width: 40px
+	height: 36px
+	path
+		fill: $color-blue-dot
 
+.stage-development__desc
+	font-size: 15px
+	line-height: 20px
+	white-space: pre-line
+	color: $blue-gray
 
+#icon-development1
+	height: 36px
+
+.st1
+	fill: #0FA4E7
+
+.st2
+	fill: #0f86c0
+
+.icon-development3
+	height: 28px !important
+
+/* Canvas */
+
+.canvas-main
+	height: 296px
+	background: $blue-gray
+	text-align: center
+
+/* We Do*/
+
+.we-do__item
+	min-height: 420px
+	position: relative
+
+.we-do__item-child
+	position: absolute
+	display: table
+	min-height: 420px
+	width: 100%
+	top: 0
+	left: 0
+
+.we-do .heading-h3__default
+	margin-bottom: 37px
+
+.we-do__heading
+	display: table-cell
+	vertical-align: middle
+	font-size: 36px
+	line-height: 41px
+	text-align: center
+	color: $color-white
+
+.we-do__circle-buttom
+	position: absolute
+	left: 50%
+	bottom: 20px
+	margin-left: -25px
+	display: inline-block
+	text-align: center
+	width: 50px
+	height: 50px
+	line-height: 54px
+	background: $color-white
+	border-radius: 50%
+	transition: all .2s ease
+	&:hover
+		box-shadow: 0 0 0 5px $color-white
+		#we-do__icon-arrov
+			path
+				fill: $color-pink
+
+#we-do__icon-arrov
+	width: 8px
+	path
+		transition: all .25s linear
+		fill: $color-blue-dark
 
 
 
