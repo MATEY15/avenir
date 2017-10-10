@@ -32,7 +32,7 @@ html
 	height: 100%
 
 body
-	font-size: 16px
+	font-size: 17px
 	font-family: $default-font
 	font-weight: 500
 	min-height: 100%
@@ -101,6 +101,9 @@ h1.big
 	text-align: center
 	color: $blue-gray
 	white-space: pre-line;
+
+.padd-top___40
+	padding-top: 40px
 
 .padd-top___80
 	padding-top: 80px
@@ -348,12 +351,25 @@ textarea
 /* Header */
 
 .header
-	background: #0d0e23 url(../img/bg-header--main.jpg)
-	background-repeat: no-repeat
-	background-position: center 0
-	background-size: cover
+	position: relative
+	//background: #0d0e23 url(../img/bg-header--main.jpg)
+	background-repeat: no-repeat !important
+	//background-position: center 0
+	background-size: cover !important
 	min-height: 760px
 	padding-top: 100px
+	&::before
+		content: ""
+		display: block
+		background: linear-gradient(to bottom, rgba(13,14,35,0.1) 0%, rgba(13,14,35,0.15) 100%)
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+.header-inside__style
+	min-height: 650px
 
 .top-line__wrapper
 	width: 100%
@@ -761,7 +777,64 @@ textarea
 		fill: $color-blue-dark
 
 
+/* About */
 
+.defaula-h3__offset
+	margin-bottom: 37px
+
+.heading-header__inside
+	margin-top: 220px
+	h1
+		font-size: 60px
+		line-height: 62px
+		font-weight: 600
+		text-transform: uppercase
+		color: $color-white
+		text-align: center
+
+.our-team
+	background: $bacground-gray
+	.our-team__spiker
+		padding-top: 73px
+
+.our-team__item
+	max-width: 360px
+	max-height: 400px
+	min-height: 400px
+	margin-bottom: 40px
+	position: relative
+	color: $color-white
+	border-radius: 4px
+	overflow: hidden
+	box-shadow: 0 0 40px 20px rgba(13, 14, 35, 0.07);
+.our-team__item-name
+	position: absolute
+	width: 100%
+	height: 110px
+	padding: 23px 30px 0
+	z-index: 1
+	left: 0
+	bottom: 0
+	background: linear-gradient(to bottom,rgba(13, 14, 35, 0) 0,rgba(13, 14, 35, 0.35) 90%)
+.our-team__item--heading
+	font-size: 24px
+	line-height: 38px
+	font-weight: 600
+.our-team__social
+	position: absolute
+	width: 40px
+	height: 40px
+	background: $color-white
+	border-radius: 50%
+	text-align: center
+	right: 30px
+	top: 40px
+	transition: all .25s ease
+	&:hover
+		background: $color-pink
+	i
+		color: #2b3047
+		line-height: 40px
 
 
 
@@ -837,6 +910,8 @@ textarea
 		background: $social-hover
 	i
 		line-height: 42px
+	.fa-linkedin
+		line-height: 40px
 
 .footer-bottom
 	padding-top: 42px

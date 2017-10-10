@@ -1,5 +1,14 @@
 $(function() {
 
+	// Header Bacground
+
+	$( ".header" ).each(function() {
+  var attr = $(this).attr('data-image-src');
+  if (typeof attr !== typeof undefined && attr !== false) {
+      $(this).css('background', 'url('+attr+') center bottom '); //center center
+  }
+});
+
 	// Click Prevent Default
 
 	$('#click-prevent').click(function(e){
