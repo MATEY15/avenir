@@ -1,18 +1,24 @@
 $(function() {
 
+	// Select Style
+
+	$(function() {
+		jcf.replaceAll();
+	});
+
 	// Header Bacground
 
 	$( ".header" ).each(function() {
-  var attr = $(this).attr('data-image-src');
-  if (typeof attr !== typeof undefined && attr !== false) {
-      $(this).css('background', 'url('+attr+') center bottom '); //center center
-  }
-});
+		var attr = $(this).attr('data-image-src');
+		if (typeof attr !== typeof undefined && attr !== false) {
+				$(this).css('background', 'url('+attr+') center bottom '); //center center
+			}
+		});
 
 	// Click Prevent Default
 
 	$('#click-prevent').click(function(e){
-		 e.preventDefault();
+		e.preventDefault();
 	});
 
 	// Footer height
@@ -77,5 +83,13 @@ $(function() {
 		smartSpeed: 750,
 		items: 1
 	});
+
+	// Accordeon 
+
+	$(".accordeon dd").hide().prev().click(function() {
+		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
+		$(this).next().not(":visible").slideDown().prev().addClass("active");
+	});
+	$(".accordeon dd").first().show();
 
 });
