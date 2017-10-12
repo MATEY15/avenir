@@ -1,5 +1,33 @@
 $(function() {
 
+	// Popup
+
+	$(".popup").magnificPopup({
+		removalDelay: 150,
+		mainClass: 'mfp-fade'
+	});
+
+	// Video
+
+	$(function(){
+		var $refreshButton = $('#refresh');
+		var $results = $('#css_result');
+		
+		function refresh(){
+			var css = $('style.cp-pen-styles').text();
+			$results.html(css);
+		}
+
+		refresh();
+		$refreshButton.click(refresh);
+		
+		// Select all the contents when clicked
+		$results.click(function(){
+			$(this).select();
+		});
+
+	});
+
 	// Select Style
 
 	$(function() {
@@ -8,7 +36,7 @@ $(function() {
 
 	// Header Bacground
 
-	$( ".header" ).each(function() {
+	$(".header, .header-post").each(function() {
 		var attr = $(this).attr('data-image-src');
 		if (typeof attr !== typeof undefined && attr !== false) {
 				$(this).css('background', 'url('+attr+') center bottom '); //center center
