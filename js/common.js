@@ -71,6 +71,17 @@ $(function() {
 		}
 	});
 
+	// Fixed closed
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 50){  
+			$('.post-popup').addClass("active");
+		}
+		else{
+			$('.post-popup').removeClass("active");
+		}
+	});
+
 	// Animated burger
 
 	$('.mobile-menu__open').click(function() {

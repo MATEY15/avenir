@@ -32,6 +32,35 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
+	.event-item
+		width: 286px
+		overflow: hidden
+		.event-item__img
+		width: 286px
+		overflow: hidden
+		img
+			width: 360px !important
+			margin-left: -10%
+			max-width: initial
+	.resources-item__img
+		height: 205px
+		img
+			max-width: 100%
+	.our-team__item-name
+		padding: 23px 20px 0
+	.our-team__item-crop
+		width: 286px
+		height: 400px
+		overflow: hidden
+		img
+			width: 360px !important
+			height: 400px !important
+			margin-left: -10%
+			max-width: initial
+	.header-nav__link
+		font-size: .85em
+	.bot-automation__offset
+		margin-top: 40px
 	.wrapper-bot
 		width: 526px
 	.button__top-line
@@ -94,6 +123,36 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.blog-wrapper__top--line
+		padding-top: 40px
+		margin-bottom: 10px
+	.blog-categiries
+		margin-bottom: 20px
+	.events-wrapper
+		.events-h2__heading
+			text-align: center
+	.event-item
+		width: 100%
+	.event-item img
+		margin-left: 0
+	.resources-wrapper
+		.events-h2__heading
+			text-align: center
+	.resources-item,
+	.resources-item__default
+		max-width: 260px
+		margin: 0 auto 30px
+	.resources-item__img
+		height: auto
+	.our-team__item-crop
+		width: 100%
+		img
+			margin-left: 0
+	.bot-automation__heading
+		//white-space: normal\
+	.bot-automation__img
+		float: none
+		margin: 0 auto
 	.heading-p__default
 		white-space: initial
 	.we-do__item-child
@@ -148,7 +207,7 @@
 		padding: 0
 
 	.header-nav__link
-		font-size: .9em
+		font-size: .8em
 		padding: 0 5px
 
 	.navigation-footet__item
@@ -165,6 +224,15 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.mfp-close-btn-in .mfp-close
+		right: 15px
+		top: 15px
+	.header-inside__style
+		min-height: 400px !important
+	.heading-header__inside
+		margin-top: 80px
+	.bot-automation__heading
+		text-align: center
 	.top-line__wrapper--bg
 		background: $color-blue
 		border-bottom: 1px solid $color-blue-light-dark2
@@ -216,6 +284,18 @@
 		padding-right: 23px
 
 @media only screen and (max-width : 767px)
+	.cases-content__wrapper
+		margin-bottom: 40px
+	.video-wrapper
+		margin-top: 0
+	.services-bot__heading
+		text-align: center
+	.services-bot__iphone
+		max-width: 300px
+	.services-bot
+		padding-bottom: 35px
+		.padd-top___120
+			padding-top: 20px
 	.we-do__circle-buttom
 		bottom: 40px
 	.we-do__item-child
@@ -260,7 +340,24 @@
 	.navigation-footet__item
 		padding: 0 15px
 
+@media only screen and (max-width : 720px)
+	.lab-facilities__wrapper
+		background-size: contain
+
 @media only screen and (max-width : 640px)
+	.our-team__item-name
+		padding: 23px 20px 0
+	.our-team__item-crop
+		width: 286px
+		height: 400px
+		overflow: hidden
+		img
+			width: 360px !important
+			height: 400px !important
+			margin-left: -10%
+			max-width: initial
+	.contact-form__wrapper
+		padding: 30px 20px 30px
 	.we-do__item-child
 		min-height: 300px
 	.stage-development__item
@@ -273,10 +370,55 @@
 		padding-bottom: 25px
 
 @media only screen and (max-width : 600px)
+	.event-item
+		max-width: 360px
+		margin: 0 auto 35px
+	.events-wrapper__container
+		.col-xs-6
+			width: 100%
+	.our-team__spiker
+		.col-md-4
+			width: 100%
+	.our-team__item-crop
+		width: 100%
+		img
+			margin-left: 0
+	.our-team__item
+		margin: 0 auto 25px
+	.contact-form__wrapper
+		.col_4
+			width: 100%
+	.lab-facilities__wrapper
+		background: none
 	.carousel-top__item
 		max-width: 480px
 
 @media only screen and (max-width : 540px)
+	.footer-post
+		padding: 20px
+	.post-quotes .quotes-icon
+		left: 16px
+	.post-quotes
+		padding: 36px 40px 42px 50px
+	.post-content
+		padding-left: 20px
+		padding-right: 20px
+	.blog-wrapper__content
+		.col-xs-6
+			width: 100%
+	.blog-item__main
+		max-width: 360px
+		margin: 0 auto 35px
+	.cases-content
+		padding-top: 40px
+	.contact-info
+		margin-bottom: 30px
+	.email-link
+		display: block
+	.lab-facilities__wrapper
+		padding-top: 60px
+	.navigation-footet__item
+		padding: 0 5px
 	.header
 		min-height: 680px
 	.wrapper__carousel-top
@@ -306,6 +448,33 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.share-post__item
+		float: none
+		margin: 10px 2px 0
+		display: inline-block
+	.share-post
+		text-align: center
+	.share-post__list
+		margin: 0
+		display: block
+		float: none
+	.footer-container
+		.col_6
+			width: 100%
+			text-align: center
+	.resources-wrapper
+		.col-xs-6
+			width: 100%
+	.contact-form__wrapper
+		.col_6
+			width: 100%
+		.default-textarea
+			margin-top: 20px
+	.item-default__gorizontal
+		display: block
+		padding: 0
+		&::before
+			display: none
 	.carousel-top__item
 		padding: 0 15px
 	.heading-h3__default
@@ -319,6 +488,8 @@
 		padding: 40px 25px 30px
 
 @media only screen and (max-width : 375px)
+	.header-post__heading
+		white-space: initial
 	.dot-blue
 		right: 10px
 	.dot-green
@@ -333,6 +504,19 @@
 		padding: 0 5px
 
 @media only screen and (max-width : 360px)
+	.our-team__item
+		max-width: 286px
+	.our-team__item-name
+		padding: 23px 20px 0
+	.our-team__item-crop
+		width: 286px
+		height: 400px
+		overflow: hidden
+		img
+			width: 360px !important
+			height: 400px !important
+			margin-left: -10%
+			max-width: initial
 	.heading-h3__default
 		font-size: 28px
 		line-height: 32px
@@ -345,6 +529,16 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
+	.event-item
+		width: 286px
+		overflow: hidden
+		.event-item__img
+		width: 286px
+		overflow: hidden
+		img
+			width: 360px !important
+			margin-left: -10%
+			max-width: initial
 	.footer-social__list
 		margin-top: 40px
 	.text-center__320
@@ -375,12 +569,38 @@
 		display: none
 
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
 
+//@media (man-height: 640px) and (max-width: 991px)
+@media only screen and (max-height : 640px)
+	.header-nav__list
+		padding-top: 20px
+
+@media only screen and (max-height : 600px)
+	.header-nav__item
+		margin-bottom: 15px
+
+@media only screen and (max-height : 560px)
+	.header-nav__item
+		margin-bottom: 10px
+	.header-nav__button
+		margin-top: 10px
+		margin-bottom: 35px
+
+@media only screen and (max-height : 520px)
+	.header-nav__item
+		margin-bottom: 5px
+	.header-nav__button
+		margin-top: 5px
+		margin-bottom: 20px
+
+@media only screen and (max-height : 480px)
+	.header-nav__item
+		margin-bottom: 0px
+	.header-nav__button
+		margin-top: 5px
+		margin-bottom: 20px
