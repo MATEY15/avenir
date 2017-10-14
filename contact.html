@@ -139,9 +139,6 @@
 		</section>
 
 		<div class="map-wrapper">
-			<div class="map">
-				<h1 class="text-center">Карту нужно зарегестрировать в Google по ссылке</h1>
-			</div>
 			<div class="contact-office">
 				<div class="container">
 					<div class="contact-office__tab">
@@ -185,6 +182,7 @@
 					</div>
 				</div>
 			</div>
+			<div id="map"></div>
 		</div>
 
 	</main>
@@ -290,5 +288,74 @@
 		window.onload = resize;
 		window.onresize = resize;
 	</script>
+	<script type="text/javascript">
+		function initMap() {
+			var myLatlng1 = {lat: 51.491686, lng: -0.038784},
+					myLatlng2 = {lat: 21.7679, lng: 78.8718},
+					myLatlng3 = {lat: 25.0657, lng: 55.17128},
+					myLatlng4 = {lat: 40.748817, lng: -73.985428};
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 17,
+				center: myLatlng1,
+				styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#34334f"},{"lightness":"-37"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#2d2c45"},{"lightness":"0"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":.2}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#7d7c9b"},{"lightness":"43"}]},{"featureType":"road.highway","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#2d2c45"},{"lightness":"1"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#7d7c9b"}]},{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#2d2c45"},{"lightness":"-1"},{"gamma":"1"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"},{"hue":"#ff0000"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#7d7c9b"},{"lightness":"-31"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#2d2c45"},{"lightness":"-36"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2d2c45"},{"lightness":"0"},{"gamma":"1"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]}]
+			});
+
+			var markerImage = new google.maps.MarkerImage(
+				'img/pin-map.png',
+				new google.maps.Size(43,59),
+				new google.maps.Point(0,0),
+				new google.maps.Point(0,59)
+				);
+
+			var marker1 = new google.maps.Marker({
+				icon: markerImage,
+				position: myLatlng1,
+				map: map,
+				title: 'Click to zoom'
+			});
+
+			var marker2 = new google.maps.Marker({
+				icon: markerImage,
+				position: myLatlng2,
+				map: map,
+				title: 'Marsele'
+			});
+
+			var marker3 = new google.maps.Marker({
+				icon: markerImage,
+				position: myLatlng3,
+				map: map,
+				title: 'Marsele'
+			});
+
+			var marker4 = new google.maps.Marker({
+				icon: markerImage,
+				position: myLatlng4,
+				map: map,
+				title: 'Marsele'
+			});
+
+			$('#adress1').click(function(){
+				map.setZoom(17);
+				map.setCenter(marker1.getPosition());
+			});
+			$('#adress2').click(function(){
+				map.setZoom(8);
+				map.setCenter(marker2.getPosition());
+			});
+			$('#adress3').click(function(){
+				map.setZoom(8);
+				map.setCenter(marker3.getPosition());
+			});
+			$('#adress4').click(function(){
+				map.setZoom(8);
+				map.setCenter(marker4.getPosition());
+			});
+
+		}
+	</script>
+	<!-- actuyu@gmail.com -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR_850X4RmlxrZ-EWJ5deO-7opjQmVdJY&callback=initMap"></script>
 </body>
 </html>
