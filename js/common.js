@@ -7,26 +7,12 @@ $(function() {
 		mainClass: 'mfp-fade'
 	});
 
-	// Video
+//  Video
 
-	$(function(){
-		var $refreshButton = $('#refresh');
-		var $results = $('#css_result');
-		
-		function refresh(){
-			var css = $('style.cp-pen-styles').text();
-			$results.html(css);
-		}
-
-		refresh();
-		$refreshButton.click(refresh);
-		
-		// Select all the contents when clicked
-		$results.click(function(){
-			$(this).select();
-		});
-
-	});
+//var myPlayer = videojs('my_video_1');
+// videojs("my_video_1", {}, function(){
+//   // Player (this) is initialized and ready.
+// });
 
 	// Select Style
 
@@ -104,6 +90,12 @@ $(function() {
 		} 
 		else {     
 			$('.mobile-menu__list').animate({height: 'hide'}, 300); 
+		}
+		if ($('.header-nav__button').css('display') == 'none') { 
+			$('.header-nav__button').animate({height: 'show'}, 300); 
+		} 
+		else {     
+			$('.header-nav__button').animate({height: 'hide'}, 300); 
 		}
 	});
 

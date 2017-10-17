@@ -1930,11 +1930,10 @@ textarea,
 	text-align: left
 	.date-posts
 		margin-bottom: 0 !important
-
-.header-post__heading
-	color: #323342
-	text-align: left
-	margin-bottom: 22px
+	.header-post__heading
+		color: #323342
+		text-align: left
+		margin-bottom: 22px
 
 .footer-news
 	.share-post
@@ -1946,17 +1945,42 @@ textarea,
 		position: relative
 		top: 5px
 
+/* Crop img Team */
+
+.our-team__item-crop
+	position: relative
+	width: 400px
+	height: 400px
+	overflow: hidden
 
 
+.our-team__item--img
+	width: 100% !important
+	height: auto !important
 
+.our-team__item-crop img
+	position: absolute
+	left: 50%
+	top: 50%
+	height: 100%
+	width: auto
+	-webkit-transform: translate(-50%,-50%)
+	-ms-transform: translate(-50%,-50%)
+	transform: translate(-50%,-50%)
 
+/* Video Services */
 
+.services-bot__video
+	background-image: url(../img/bot-iphone-bg.png)
+	width: 370px
+	height: 638px
+	margin: 0 auto
 
-
-
-
-
-
+.services-bot__video--crop
+	width: 250px
+	position: relative
+	margin-left: 53px
+	top: 77px
 
 /* Footer */
 
