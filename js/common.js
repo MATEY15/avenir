@@ -7,12 +7,19 @@ $(function() {
 		mainClass: 'mfp-fade'
 	});
 
-//  Video
+	//  Video
 
-//var myPlayer = videojs('my_video_1');
-// videojs("my_video_1", {}, function(){
-//   // Player (this) is initialized and ready.
-// });
+$(document).ready(function() {
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
+});
 
 	// Select Style
 
@@ -97,6 +104,7 @@ $(function() {
 		else {     
 			$('.header-nav__button').animate({height: 'hide'}, 300); 
 		}
+		$('.header-nav').toggleClass('offsetBottom');
 	});
 
 	// Slider Top

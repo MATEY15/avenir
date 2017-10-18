@@ -232,9 +232,14 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.offsetBottom
+		padding-bottom: 20px
 	.header-nav__button
 		display: none
-		padding: 10px 23px
+		max-height: 50px
+		padding: 16px 23px 15px
+		line-height: normal
+		margin-bottom: 20px
 	nav.header-nav
 		background: #14152e
 		text-align: center
@@ -291,9 +296,8 @@
 		font-size: 1.125em
 		width: 100%
 	.header-nav__button
-		display: inline-block
-		margin-top: 24px
-		margin-bottom: 42px
+		//margin-top: 24px
+		//margin-bottom: 42px
 	.button__top-line
 		padding-left: 23px
 		padding-right: 23px
@@ -597,7 +601,9 @@
 	.header-nav__button
 		display: none
 
-
+@media only screen and (min-width : 768px)
+	.header-nav__list
+		display: block !important
 
 
 /* Large Devices, Wide Screens */
