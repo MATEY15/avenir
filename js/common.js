@@ -9,7 +9,6 @@ $(function() {
 
 	//  Video
 
-$(document).ready(function() {
 	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
@@ -19,7 +18,6 @@ $(document).ready(function() {
 
 		fixedContentPos: false
 	});
-});
 
 	// Select Style
 
