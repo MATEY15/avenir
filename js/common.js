@@ -1,5 +1,58 @@
 $(function() {
 
+	// Open mobile menu
+
+	$('.mobile-menu__open').click(function(){
+		if ($('.header-nav').css('display') == 'none') { 
+			$('.header-nav').animate({height: 'show'}, 300);
+		} 
+		else {     
+			$('.header-nav').animate({height: 'hide'}, 300); 
+		}
+	});
+
+	// Add Span
+	$('.menu-item-has-children').prepend('<span class="open-sub"></span>');
+
+	if(matchMedia){
+		var screen = window.matchMedia("(max-width:768px)");
+		screen.addListener(changes);
+		changes(screen);
+	}
+	function changes(screen){
+		if(screen.matches){
+			$('.header-nav').addClass('mobileMenu');
+			$('ul.sub-menu').removeClass('sub-menu');
+		}
+		else{
+			$('.header-nav').removeClass('mobileMenu');
+
+			if ($('.menu-item-has-children ul').hasClass('sub-menu') == false) {
+				$('.menu-item-has-children ul').addClass('sub-menu');
+			}
+		}
+	}
+
+	// Accordion
+
+	$('.header-nav li.active').addClass('open').children('ul').show();
+	$('.header-nav li.menu-item-has-children>span').on('click', function(){
+		var element = $(this).parent('li');
+		if (element.hasClass('open')) {
+			element.removeClass('open');
+			element.find('li').removeClass('open');
+			element.find('ul').slideUp(200);
+		}
+		else {
+			element.addClass('open');
+			element.children('ul').slideDown(200);
+			element.siblings('li').children('ul').slideUp(200);
+			element.siblings('li').removeClass('open');
+			element.siblings('li').find('li').removeClass('open');
+			element.siblings('li').find('ul').slideUp(200);
+		}
+	});
+
 	// Popup
 
 	$(".popup").magnificPopup({
@@ -85,24 +138,6 @@ $(function() {
 
 	$('.mobile-menu__open').click(function(){
 		$('.top-line__wrapper').toggleClass('top-line__wrapper--bgt top-line__wrapper--bg');
-	});
-
-	// Open mobile menu
-
-	$('.mobile-menu__open').click(function(){
-		if ($('.header-nav__list').css('display') == 'none') { 
-			$('.mobile-menu__list').animate({height: 'show'}, 300); 
-		} 
-		else {     
-			$('.mobile-menu__list').animate({height: 'hide'}, 300); 
-		}
-		if ($('.header-nav__button').css('display') == 'none') { 
-			$('.header-nav__button').animate({height: 'show'}, 300); 
-		} 
-		else {     
-			$('.header-nav__button').animate({height: 'hide'}, 300); 
-		}
-		$('.header-nav').toggleClass('offsetBottom');
 	});
 
 	// Slider Top

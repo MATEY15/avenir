@@ -232,18 +232,65 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	span.open-sub
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 100%
+		height: 50px
+		z-index: 100
+	.header-nav__list
+		padding-top: 34px
+		text-align: center
+		background: $color-blue
+	.header-nav__item
+		display: block
+		text-align: center
+		padding-top: 11px
+		padding-bottom: 11px
+	.header-nav__link
+		font-size: 18px
+		width: 100%
+	.menu-item-has-children
+		position: relative
+		&.open
+			background: #292c47
+			& .header-nav__link
+				opacity: 1
+		ul>li
+			padding: 0
+		ul>li>a
+			font-size: 15px
+			line-height: 26px
+			text-transform: none
+			color: #6e7499
+			display: block
+			padding: 8px 0 16px
+	.menu-item-has-children ul
+		display: none
+	.sub-menu
+		visibility: visible
+		opacity: 1
+		position: relative
+		padding-top: 5px
+		overflow: hidden
+		transform: translateY(0px)
+		transition: all .3s cubic-bezier(.645,.045,.355,1)
 	.offsetBottom
 		padding-bottom: 20px
 	.header-nav__button
-		display: none
+		//display: none
 		max-height: 50px
 		padding: 16px 23px 15px
 		line-height: normal
 		margin-bottom: 20px
-	nav.header-nav
+	.header-nav
+		display: none
 		background: #14152e
 		text-align: center
 		margin-top: 79px
+		border-top: 1px solid #292c47
 	.mfp-close-btn-in .mfp-close
 		right: 15px
 		top: 15px
@@ -282,19 +329,6 @@
 		padding-bottom: 15px
 	.top-line__wrapper--bg
 		background: $color-blue
-	.header-nav__list
-		display: none
-		margin-top: 80px
-		padding-top: 44px
-		text-align: center
-		background: $color-blue
-	.header-nav__item
-		display: block
-		text-align: center
-		margin-bottom: 22px
-	.header-nav__link
-		font-size: 1.125em
-		width: 100%
 	.header-nav__button
 		//margin-top: 24px
 		//margin-bottom: 42px
@@ -601,8 +635,8 @@
 	.header-nav__button
 		display: none
 
-@media only screen and (min-width : 768px)
-	.header-nav__list
+@media only screen and (min-width : 769px)
+	.header-nav
 		display: block !important
 
 
