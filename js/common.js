@@ -156,6 +156,20 @@ $(function() {
 		items: 1
 	});
 
+	$('.slider-clients__wrapper').owlCarousel({
+		loop:true,
+		nav:true,
+		dots: true,
+		autoplay: false,
+		autoplayTimeout:5000,
+		//animateOut: 'fadeOut',
+		//margin: 50,
+		navText : ['',''],
+		autoplayHoverPause:true,
+		smartSpeed: 750,
+		items: 3
+	});
+
 	// Accordeon 
 
 	$(".accordeon dd").hide().prev().click(function() {

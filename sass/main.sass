@@ -221,6 +221,9 @@ h1.big
 .padd-bottom___100
 	padding-bottom: 100px
 
+.padd-bottom___150
+	padding-bottom: 150px
+
 .padd-right__60
 	padding-right: 60px
 
@@ -964,8 +967,23 @@ textarea
 /* We Do*/
 
 .we-do__item
-	min-height: 420px
+	height: 420px
 	position: relative
+	background: $color-blue-dark
+	border-radius: 4px
+	overflow: hidden
+	box-shadow: 0 15px 30px 0 rgba(13,14,35,.07)
+
+.we-do__images
+	opacity: .6
+	position: absolute
+	left: 50%
+	top: 50%
+	height: 100%
+	width: auto
+	-webkit-transform: translate(-50%,-50%)
+	-ms-transform: translate(-50%,-50%)
+	transform: translate(-50%,-50%)
 
 .we-do__item-child
 	position: absolute
@@ -1011,6 +1029,54 @@ textarea
 		transition: all .25s linear
 		fill: $color-blue-dark
 
+/* Slider Clients */
+
+.slider-clients
+	background: linear-gradient(to bottom,#f5f7f9 0,#f0f2f5 100%)
+
+.slider-clients__img
+	width: auto !important
+	margin: 0 auto
+
+.slider-clients__item
+	text-align: center
+	a
+		display: inline-block
+
+.slider-clients
+	.owl-dots
+		position: absolute
+		bottom: -50px
+		width: 100%
+		.owl-dot
+			background: $color-white
+			&.active
+				background: $color-pink
+
+.slider-clients__wrapper
+	.owl-prev
+		//opacity: .5
+		width: 12px
+		height: 24px
+		background-image: url("../img/arrow-slider.png")
+		top: 50%
+		//left: 60px
+		margin-top: -12px
+		transition: all .25s ease
+		&:hover
+			opacity: 1
+	.owl-next
+		//opacity: .5
+		width: 12px
+		height: 24px
+		background-image: url("../img/arrow-slider.png")
+		background-position: right 0
+		top: 50%
+		//right: 60px
+		margin-top: -12px
+		transition: all .25s ease
+		&:hover
+			opacity: 1
 
 /* About */
 
