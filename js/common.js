@@ -167,7 +167,24 @@ $(function() {
 		navText : ['',''],
 		autoplayHoverPause:true,
 		smartSpeed: 750,
-		items: 3
+		//items: 3
+		responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:1
+				},
+				640:{
+					items:2
+				},
+				992:{
+					items:2
+				},
+				1200:{
+					items:3
+				}
+			}
 	});
 
 	// Accordeon 
